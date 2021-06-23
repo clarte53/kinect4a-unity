@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<DependenciesList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <name>kinect4a-unity</name>
+  <dependencies>
+    <DependencyDesc>
+      <name>clarte-utils</name>
+      <address>ssh://git@github.com:clarte53/clarte-utils.git</address>
+      <commitId>eb57c8f0</commitId>
+    </DependencyDesc>
+  </dependencies>
+</DependenciesList>
