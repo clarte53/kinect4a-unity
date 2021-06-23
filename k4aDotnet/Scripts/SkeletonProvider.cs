@@ -81,12 +81,26 @@ namespace K4AdotNet.Samples.Unity
         {
             if (IsAvailable)
             {
-                using var capture = e.Capture;
-                using var depthImage = capture.DepthImage;
-                using var irImage = capture.IRImage;
-                if (!(depthImage is null) && !(irImage is null))
-                    _tracker.TryEnqueueCapture(capture);
-            }
+				//using var capture = e.Capture;
+				//using var depthImage = capture.DepthImage;
+				//using var irImage = capture.IRImage;
+				//if (!(depthImage is null) && !(irImage is null))
+				//    _tracker.TryEnqueueCapture(capture);
+
+				using(var capture = e.Capture)
+				{
+					using(var depthImage = capture.DepthImage)
+					{
+						using(var irImage = capture.IRImage)
+						{
+							if(!(depthImage is null) && !(irImage is null))
+							{
+								_tracker.TryEnqueueCapture(capture);
+							}
+						}
+					}
+				}
+			}
         }
 
         private void Update()
